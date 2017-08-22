@@ -1,0 +1,37 @@
+host:Documents$ git clone https://github.com/dversick/eHealthApp.git
+Cloning into 'eHealthApp'...
+remote: Counting objects: 7, done.
+remote: Total 7 (delta 0), reused 0 (delta 0), pack-reused 7
+Unpacking objects: 100% (7/7), done.
+host:Documents$ cd eHealthApp/
+host:eHealthApp$ ls
+LICENSE README.md
+host:eHealthApp$ git branch 02-readme-update
+02-readme-update
+* master
+host:eHealthApp$ git checkout 02-readme-update
+Switched to branch '02-readme-update'
+host:eHealthApp$ git branch
+* 02-readme-update
+master
+Now do your changes!
+host:eHealthApp$ git diff
+diff --git a/README.md b/README.md
+index bc2be7e..7326223 100644
+--- a/README.md
++++ b/README.md
+@@ -1,3 +1,3 @@
+# eHealthApp
+-Your eHealth App
++Your eHealth App with changes
+end of file
+host:eHealthApp$ git commit -a -m '#2 change in readme file'
+[02-readme-update b5cae04] #2 change in readme file
+1 file changed, 1 insertion(+), 1 deletion(-)
+host:eHealthApp$ git checkout master
+Switched to branch ‘master'
+host:eHealthApp$ git merge 02-readme-update -m ‘#2 merge branch’
+Not committing merge; use 'git commit' to complete the merge.
+host:eHealthApp$ git commit -a -m ‘#2 merge branch’
+[master b1bc37d] Merge branch '02-readme-update'
+17
